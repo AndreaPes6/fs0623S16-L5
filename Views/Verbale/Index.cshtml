@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Verbali";
+}
+
+<div class="container">
+    <h1 class="text-center">Elenco Verbali</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ID Violazione</th>
+                    <th>ID Anagrafica</th>
+                    <th>Data Violazione</th>
+                    <th>Indirizzo Violazione</th>
+                    <th>Nominativo Agente</th>
+                    <th>Data Trascrizione Verbale</th>
+                    <th>Importo</th>
+                    <th>Decurtamento Punti</th>
+                    <th>Contestazione</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var Verbale in Model)
+                {
+                    <tr>
+                        <td>@Verbale.ID</td>
+                        <td>@Verbale.IDViolazione</td>
+                        <td>@Verbale.IDAnagrafica</td>
+                        <td>@Verbale.DataViolazione</td>
+                        <td>@Verbale.IndirizzoViolazione</td>
+                        <td>@Verbale.Nominativo_Agente</td>
+                        <td>@Verbale.DataTrascrizioneVerbale</td>
+                        <td>@Verbale.Importo</td>
+                        <td>@Verbale.DecurtamentoPunti</td>
+                        <td>@(Verbale.Contestazione ? "Contestata" : "Non Contestata")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

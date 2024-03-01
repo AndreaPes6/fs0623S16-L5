@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Tipologie Di Violazioni";
+}
+
+<div class="container">
+    <h1 class="text-center">Tipologie Di Violazioni</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tipo Violazione</th>
+                    <th>Elimina Violazione</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var TipiViolazione in Model)
+                {
+                    <tr>
+                        <td>@TipiViolazione.ID</td>
+                        <td>@TipiViolazione.Descrizione</td>
+                        <td>
+                            <form asp-controller="TipiViolazione" asp-action="EliminaViolazione" method="post">
+                                <input type="hidden" name="ID" value="@TipiViolazione.ID" />
+                                <button type="submit" class="btn btn-danger">Elimina</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

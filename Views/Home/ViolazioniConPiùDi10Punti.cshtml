@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Violazioni con più di 10 Punti";
+}
+
+<div class="container">
+    <h1 class="text-center">Violazioni con più di 10 Punti</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>               
+                    <th>ID Anagrafica</th>
+                    <th>Importo</th>
+                    <th>Punti Decurtati</th>
+                    <th>Data Violazione</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.IDAnagrafica</td>
+                        <td>@item.Importo</td>
+                        <td>@item.DecurtamentoPunti</td>
+                        <td>@item.DataViolazione</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

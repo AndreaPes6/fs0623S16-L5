@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Database Principale";
+}
+
+<div class="container">
+    <h1 class="text-center">Anagrafica</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Indirizzo</th>
+                    <th>Città</th>
+                    <th>Cap</th>
+                    <th>Codice Fiscale</th>
+                    <th>Elimina Persona</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var persona in Model)
+                {
+                    <tr>
+                        <td>@persona.ID</td>
+                        <td>@persona.Nome</td>
+                        <td>@persona.Cognome</td>
+                        <td>@persona.Indirizzo</td>
+                        <td>@persona.Città</td>
+                        <td>@persona.Cap</td>
+                        <td>@persona.CodFisc</td>
+                        <td>
+                            <form asp-controller="Anagrafica" asp-action="EliminaPersona" method="post">
+                                <input type="hidden" name="ID" value="@persona.ID" />
+                                <button type="submit" class="btn btn-danger">Elimina</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

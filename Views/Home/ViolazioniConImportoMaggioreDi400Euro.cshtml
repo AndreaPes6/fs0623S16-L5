@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Violazioni con Importo Maggiore di 400 Euro";
+}
+
+<div class="container">
+    <h1 class="text-center">Violazioni con Importo Maggiore di 400 Euro</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID Anagrafica</th>
+                    <th>Importo</th>              
+                    <th>Data Violazione</th>
+                    <th>Punti Decurtati</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>                
+                        <td>@item.IDAnagrafica</td>
+                        <td>@item.Importo</td>
+                        <td>@item.DataViolazione</td>
+                        <td>@item.DecurtamentoPunti</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

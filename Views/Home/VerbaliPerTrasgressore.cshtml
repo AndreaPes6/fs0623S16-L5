@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Verbali per Trasgressore";
+}
+
+<h1 class="text-center">Verbali Per Trasgressore</h1>
+
+<div class="container">    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID Anagrafica</th>
+                    <th>Totale Verbali</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.IDAnagrafica</td>
+                        <td>@item.TotaleVerbali</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

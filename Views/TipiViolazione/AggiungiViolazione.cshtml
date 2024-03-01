@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Aggiungi Violazione";
+}
+
+<div class="container">
+    <h1 class="text-center">Aggiungi Persona</h1>
+    <form asp-controller="TipiViolazione" asp-action="AggiungiViolazione" method="post">
+        <div class="mb-3">
+            <label for="Descrizione" class="form-label">Descrizione Violazione</label>
+            <input type="text" id="Descrizione" name="Descrizione" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Aggiungi</button>
+    </form>
+</div>
