@@ -15,11 +15,10 @@
             <input type="text" id="IDAnagrafica" name="IDAnagrafica" class="form-control" required>
         </div>
 
-        <div class="form-group">
-            <label class="control-label">Data Violazione</label>
-            <input type="datetime" class="form-control" name="DataViolazione" />
+        <div class="mb-3">
+            <label for="DataViolazione" class="form-label">Data Violazione:</label>
+            <input type="date" id="DataViolazione" name="DataViolazione" class="form-control" required>
         </div>
-
 
         <div class="mb-3">
             <label for="IndirizzoViolazione" class="form-label">Indirizzo Violazione:</label>
@@ -36,19 +35,20 @@
             <input type="number" id="Importo" name="Importo" class="form-control" step="0.01" required>
         </div>
 
-        <div class="form-group">
-            <label class="control-label">Data trascrizione verbale</label>
-            <input type="datetime" class="form-control dataVerbale" id="data" name="DataTrascrizioneVerbale" />
+        <div class="mb-3">
+            <label for="DataTrascrizioneVerbale" class="form-label">Data trascrizione verbale:</label>
+            <input type="date" id="DataTrascrizioneVerbale" name="DataTrascrizioneVerbale" class="form-control" required>
         </div>
 
         <div class="mb-3">
             <label for="DecurtamentoPunti" class="form-label">Punti Decurtati:</label>
-            <input type="number" id="DecurtamentoPunti" name="DecurtamentoPunti" class="form-control" step="0.01" required>
+            <input type="number" id="DecurtamentoPunti" name="DecurtamentoPunti" class="form-control" required>
         </div>
 
         <div class="mb-3">
             <label for="Contestazione" class="form-label">Contestazione:</label>
             <select id="Contestazione" name="Contestazione" class="form-control" required>
+                <option value="">Seleziona</option>
                 <option value="true">Sì</option>
                 <option value="false">No</option>
             </select>
